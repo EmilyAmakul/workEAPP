@@ -165,7 +165,7 @@ namespace PPcore.Models
         public string cid_card_pic { get; set; }
 
         [HiddenInput]
-        [Display(Name = "รหัสสถานที่สอบ")]
+        [Display(Name = "สถานที่สอบ")]
         public string mem_testcenter_code { get; set; }
 
         [HiddenInput]
