@@ -171,7 +171,7 @@ namespace PPcore.Models
         [HiddenInput]
         [Display(Name = "วันที่สมัคร")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd-MM-yyyy HH:mm:ss}")]
-        public DateTime register_date { get; set; }
+        public DateTime? register_date { get; set; }
 
         public Guid id { get; set; }
 

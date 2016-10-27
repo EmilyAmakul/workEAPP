@@ -51,7 +51,7 @@ namespace PPcore.Controllers
         {
             upwd = Utils.EncodeMd5(upwd.Trim());
 
-            var m = await _context.member.SingleOrDefaultAsync(mm => (mm.mem_username == uname.Trim()) && (mm.mem_password == upwd));
+            var m =  _context.member.SingleOrDefault(mm => (mm.mem_username == uname.Trim()) && (mm.mem_password == upwd));
             if (m != null)
             {
                 var smr = await _scontext.SecurityMemberRoles.SingleOrDefaultAsync(smrr => (smrr.MemberId == m.id) && (smrr.x_status != "N"));
