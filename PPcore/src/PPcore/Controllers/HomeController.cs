@@ -49,8 +49,6 @@ namespace PPcore.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(string uname, string upwd)
         {
-            string uu = Utils.EncodeMd5("admin11");
-            string upass = Utils.EncodeMd5(upwd.Trim());
             upwd = Utils.EncodeMd5(upwd.Trim());
 
             var m = await _context.member.SingleOrDefaultAsync(mm => (mm.mem_username == uname.Trim()) && (mm.mem_password == upwd));
